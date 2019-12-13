@@ -1,0 +1,102 @@
+.page {
+  .sidebar {
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: #161817;
+      color: #FFF;
+      padding: 15px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      &.no-sidebar
+      {
+        left: -250px;
+      }
+      .logo-area
+      {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      .links-area
+      {
+        li
+        {
+          a
+          {
+            color: #CCC;
+            padding: 10px 20px;
+            display: block;
+            transition: all .3s;
+            &:hover
+            {
+              text-decoration: none;
+              color: #FFF;
+            }
+          }
+        }
+        > li > a
+        {
+          position: relative;
+          color: #FFF;
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #FFF;
+            transform: translateY(-50%);
+          }
+          &:hover
+          {
+            padding-left: 25px;
+          }
+          .fa-angle-right
+          {
+            position: relative;
+            top: 6px;
+            float: right;
+            transition: .3s;
+            &.down
+            {
+              transform: rotate(90deg);
+            }
+          }
+        }
+        .child-links
+        {
+          position: relative;
+          display: none;
+          &:before
+          {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #666;
+          }
+          a
+          {
+            position: relative;
+            &:hover:before
+            {
+              content: "";
+              position: absolute;
+              left: 3px;
+              top: 0;
+              width: 2px;
+              height: 100%;
+              background-color: #FFF;
+            }
+          }
+        }
+      }
+  }
+}

@@ -1,0 +1,26 @@
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body
+{
+    font-family: 'Libre Baskerville', serif !important;
+}
+.page
+{
+    min-height: 100vh;
+    .content-area {
+        background-color: #f1f1f1;
+        width: calc(100% - 250px);
+        min-height: 100vh;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        will-change: width;
+        float: right;
+        &.no-sidebar
+        {
+            width: 100%;
+        }
+    }
+}
